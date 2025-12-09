@@ -1,0 +1,33 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+    "bindings": {
+      "q": "vim::AnyQuotes"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      // Move lines up/down using K/J in Vim visual mode
+      "J": "editor::MoveLineDown",
+      "S": "vim::PushAddSurrounds",
+      // Add surrounding characters using S in Vim visual mode
+      "K": "editor::MoveLineUp",
+      // Exchange in visual mode using X
+      "X": "vim::Exchange"
+    }
+  },
+  {
+		"context": "vim_mode == normal",
+		"bindings": {
+			"Y": "vim::YankToEndOfLine"
+		}
+  }
+]

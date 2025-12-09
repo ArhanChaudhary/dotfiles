@@ -1,0 +1,70 @@
+[push]
+    autoSetupRemote = true
+[core]
+	autocrlf = input
+    pager = delta
+[diff]
+    colorMoved = default
+[merge]
+    conflictstyle = zdiff3
+    autostash = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    dark = true      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+[user]
+	name = Arhan Chaudhary
+	email = arhan.ch@gmail.com
+	signingkey = 4D76274F811899D66A32AD512EE945736DB18AD5
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[commit]
+    gpsign = true
+	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+    helper = osxkeychain
+[help]
+	autocorrect = prompt
+[alias]
+	rs = !git checkout HEAD~ -- . && git stash pop && git reset
+	fpop = !git add -u . && git stash pop && git reset
+	softr = !git reset HEAD~ --soft && git reset
+	cod = !git stash -u && git stash drop
+	pib = !git format-patch -1 $(git rev-parse $1)
+
+    a = add
+	c = commit
+    cam = commit --amend --no-edit
+    co = checkout
+    s = status
+    l = log -s --graph --no-show-signature
+    lo = log --graph --oneline --no-show-signature
+    la = log -s --graph --no-show-signature --all
+    loa = log --graph --oneline --no-show-signature --all
+    log = log --graph
+    logs = log --graph --show-signature
+    root = rev-list --max-parents=0 HEAD
+    sw = switch
+    d = diff
+    ds = diff --staged
+    dw = diff --word-diff
+    dws = diff --staged --word-diff
+    b = branch
+    innit = init
+    bblame = blame -w -C -C -C -M # Blame, ignoring whitespace changes and moved code
+    p = push
+    pushf = push --force-with-lease # Force push, but don't overwrite other people's changes
+    fpush = pushf
+[pull]
+	rebase = true
+    autostash = true
+[rebase]
+    autostash = true
+[init]
+	defaultBranch = main
