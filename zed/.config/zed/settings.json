@@ -42,6 +42,21 @@
       "projects": []
     }
   ],
+  "auto_install_extensions": {
+    "astro": true,
+    "bearded-icon-theme": true,
+    "discord-presence": true,
+    "dockerfile": true,
+    "git-firefly": true,
+    "html": true,
+    "make": true,
+    "mdx": true,
+    "nix": true,
+    "svelte": true,
+    "toml": true,
+    "typst": true,
+    "wakatime": true
+  },
   "edit_predictions": {
     "disabled_globs": ["*.typ", "*.mdx", "*.md"]
   },
