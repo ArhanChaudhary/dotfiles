@@ -273,6 +273,8 @@ brew "sfml"
 brew "sl"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # Tool to impose load on and stress test a computer system
 brew "stress"
 # Change macOS audio source from the command-line
@@ -318,6 +320,8 @@ cask "gitkraken"
 cask "gstreamer-runtime"
 # Java IDE by JetBrains
 cask "intellij-idea"
+# Keyboard customiser
+cask "karabiner-elements"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Mathematics software system
