@@ -23,6 +23,6 @@ source install.sh
 - Keymapper: Karabiner-Elements
 - Hotkey manager: skhd
 
-Please note that my dotfiles are tailed to my specific use, and I have not made any attempt to make my configuration general purpose.
+Please note that my dotfiles are tailored to my specific use, and I have not made any attempt to make my configuration general purpose.
 
 Additionally, the install script is entirely untested.
