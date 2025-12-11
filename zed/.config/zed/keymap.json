@@ -27,7 +27,9 @@
   {
 		"context": "vim_mode == normal",
 		"bindings": {
-			"Y": "vim::YankToEndOfLine"
+			"Y": "vim::YankToEndOfLine",
+			"Enter": "editor::NewlineBelow",
+			"shift-Enter": "editor::NewlineAbove"
 		}
   }
 ]

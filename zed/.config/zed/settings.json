@@ -58,6 +58,7 @@
     "wakatime": true
   },
   "edit_predictions": {
+    "mode": "subtle",
     "disabled_globs": ["*.typ", "*.mdx", "*.md"]
   },
   // Workspace restoration behavior.
@@ -69,13 +70,27 @@
   // Whether to automatically close files that have been deleted on disk.
   "close_on_file_delete": false,
 
+  // inline errors
+  // https://github.com/zed-industries/zed/issues/4901#issuecomment-2914294765
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    }
+  },
+
   "features": {
     "edit_prediction_provider": "copilot"
   },
   "icon_theme": "Bearded Icon Theme",
-  "inlay_hints": {
-    "enabled": false
-  },
+  // "inlay_hints": {
+  //   "enabled": false
+  // },
   "buffer_font_features": {
     "calt": 1
   },
