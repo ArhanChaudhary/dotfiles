@@ -4,7 +4,8 @@ set -euxo pipefail
 SCRIPTDIR="$(dirname "$0")"
 
 # Symlink git hook
-ln -s pre-commit "$SCRIPTDIR"/.git/hooks/pre-commit
+chmod +x pre-commit
+ln -s "$SCRIPTDIR"/pre-commit "$SCRIPTDIR"/.git/hooks/pre-commit
 
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

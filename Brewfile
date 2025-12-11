@@ -149,9 +149,9 @@ brew "libassuan"
 brew "libusb"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
-# GNU Pretty Good Privacy (PGP) package
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
-# GNU Pretty Good Privacy (PGP) package
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg@1.4"
 # Powerful, lightweight programming language
 brew "lua"
@@ -307,6 +307,8 @@ brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
+# Universal chat app powered by Matrix
+cask "beeper"
 cask "font-sf-mono"
 cask "font-sf-pro"
 cask "font-sketchybar-app-font"
