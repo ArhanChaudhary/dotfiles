@@ -1,0 +1,2 @@
+brew bundle dump --describe -f
+git add Brewfile
