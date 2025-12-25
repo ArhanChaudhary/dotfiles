@@ -19,6 +19,7 @@ alias g=git
 alias cat=bat
 alias catt="cat -pp"
 alias cd=z
+alias hex="od -A n -t x1"
 
 # Added by LM Studio CLI
 export PATH="$PATH:/Users/arhan/.lmstudio/bin"
@@ -57,5 +58,7 @@ if [[ "$(defaults read -g AppleInterfaceStyle 2&>/dev/null)" != "Dark" ]]; then
     export MCFLY_LIGHT=TRUE
 fi
 zinit light cantino/mcfly
+
+source <(COMPLETE=zsh jj)
 
 fastfetch

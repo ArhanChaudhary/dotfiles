@@ -141,7 +141,7 @@ cmd + alt - h : yabai -m window --swap west
 cmd + alt - j : yabai -m window --swap south
 cmd + alt - k : yabai -m window --swap north
 cmd + alt - l : yabai -m window --swap east
+cmd + alt - r : yabai -m space --rotate 270
 alt - return : open -na /Applications/Ghostty.app
 ctrl + alt - left : yabai -m space --move prev
 ctrl + alt - right : yabai -m space --move next
-

@@ -68,4 +68,4 @@ keybind = alt+n>p=previous_tab
 
 window-save-state = always
 
-unfocused-split-opacity = 0.95
+unfocused-split-opacity = 0.75

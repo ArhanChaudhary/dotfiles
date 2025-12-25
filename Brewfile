@@ -119,6 +119,10 @@ brew "ffmpeg"
 brew "ffmpeg@2.8"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg@4"
+# Toolkit for image loading and pixel buffer manipulation
+brew "gdk-pixbuf"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Generate pixel-perfect macOS folder icons in the native style
 brew "folderify"
 # Library for manipulating fonts
@@ -129,8 +133,6 @@ brew "fprobe"
 brew "fzf"
 # GNU debugger
 brew "gdb"
-# Toolkit for image loading and pixel buffer manipulation
-brew "gdk-pixbuf"
 # GitHub command-line tool
 brew "gh"
 # Interpreter for PostScript and PDF
@@ -181,8 +183,6 @@ brew "pygobject3"
 brew "scipy"
 # Efficient network analysis for Python 3
 brew "graph-tool"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # GNU grep, egrep and fgrep
@@ -195,6 +195,8 @@ brew "hashcash"
 brew "helix"
 # Command-line hex viewer
 brew "hexyl"
+# Improved top (interactive process viewer)
+brew "htop"
 # Dex to Java decompiler
 brew "jadx"
 # Git-compatible distributed version control system
@@ -233,6 +235,8 @@ brew "nmap"
 brew "nnn"
 # Retrieves currently playing media, and simulates media actions
 brew "nowplaying-cli"
+# Modern shell for the GitHub era
+brew "nushell"
 # Open source computer vision library
 brew "opencv"
 # Development kit for the Java programming language
@@ -277,6 +281,8 @@ brew "starship"
 brew "stow"
 # Tool to impose load on and stress test a computer system
 brew "stress"
+# Stress test a computer system in various selectable ways
+brew "stress-ng"
 # Change macOS audio source from the command-line
 brew "switchaudio-osx"
 # Very fast implementation of tldr in Rust
@@ -324,6 +330,8 @@ cask "gstreamer-runtime"
 cask "intellij-idea"
 # Keyboard customiser
 cask "karabiner-elements"
+# Minecraft modding platform
+cask "modrinth"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Mathematics software system
@@ -338,3 +346,20 @@ cask "stats"
 cask "wine-stable"
 # Multiplayer code editor
 cask "zed"
+cargo "bat"
+cargo "cargo-bisect-rustc"
+cargo "cargo-cache"
+cargo "cargo-expand"
+cargo "cargo-generate"
+cargo "cargo-llvm-cov"
+cargo "cargo-show-asm"
+cargo "cross"
+cargo "evcxr_repl"
+cargo "eza"
+cargo "flamegraph"
+cargo "ripgrep"
+cargo "shiroa"
+cargo "tokei"
+cargo "typstyle"
+cargo "wasm-bindgen-cli"
+cargo "wasm-pack"

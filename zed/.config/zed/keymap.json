@@ -25,11 +25,16 @@
     }
   },
   {
-		"context": "vim_mode == normal",
-		"bindings": {
-			"Y": "vim::YankToEndOfLine",
-			"Enter": "editor::NewlineBelow",
-			"shift-Enter": "editor::NewlineAbove"
-		}
+    "context": "vim_mode == normal",
+    "bindings": {
+      "Y": "vim::YankToEndOfLine"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "Enter": "editor::NewlineBelow",
+      "shift-Enter": "editor::NewlineAbove"
+    }
   }
 ]
