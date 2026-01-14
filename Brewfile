@@ -73,6 +73,10 @@ brew "colima"
 brew "coreutils"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
+# GNU grep, egrep and fgrep
+brew "grep"
+# Tool for building toolchains
+brew "crosstool-ng"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Minimal, fast alternative to 'du -sh'
@@ -139,6 +143,8 @@ brew "gh"
 brew "ghostscript"
 # Distributed revision control system
 brew "git"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
 # Git extension for versioning large files
@@ -185,8 +191,6 @@ brew "scipy"
 brew "graph-tool"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
-# GNU grep, egrep and fgrep
-brew "grep"
 # GNU Ubiquitous Intelligent Language for Extensions
 brew "guile"
 # Proof-of-work algorithm to counter denial-of-service (DoS) attacks
@@ -217,6 +221,8 @@ brew "libyaml"
 brew "llvm@19"
 # Java-based project management
 brew "maven"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
 # Command-line music player client for mpd
 brew "mpc"
 # Open source relational database management system
@@ -235,6 +241,10 @@ brew "nmap"
 brew "nnn"
 # Retrieves currently playing media, and simulates media actions
 brew "nowplaying-cli"
+# Libraries for security-enabled client and server applications
+brew "nss"
+# Statically typed programming language for scientific computations
+brew "numbat"
 # Modern shell for the GitHub era
 brew "nushell"
 # Open source computer vision library
@@ -273,6 +283,10 @@ brew "ripgrep"
 brew "sbt"
 # Multi-media library with bindings for multiple languages
 brew "sfml"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Autoformat shell script source code
+brew "shfmt"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 # Cross-shell prompt for astronauts
@@ -289,8 +303,6 @@ brew "switchaudio-osx"
 brew "tealdeer"
 # User interface to the TELNET protocol
 brew "telnet"
-# Programmatically correct mistyped console commands
-brew "thefuck"
 # Terminal multiplexer
 brew "tmux"
 # Markup-based typesetting system
@@ -346,20 +358,25 @@ cask "stats"
 cask "wine-stable"
 # Multiplayer code editor
 cask "zed"
+# Multiplayer code editor
+cask "zed@preview"
 cargo "bat"
 cargo "cargo-bisect-rustc"
 cargo "cargo-cache"
 cargo "cargo-expand"
 cargo "cargo-generate"
+cargo "cargo-leptos"
 cargo "cargo-llvm-cov"
 cargo "cargo-show-asm"
 cargo "cross"
 cargo "evcxr_repl"
 cargo "eza"
 cargo "flamegraph"
+cargo "leptosfmt"
 cargo "ripgrep"
 cargo "shiroa"
 cargo "tokei"
+cargo "trunk"
 cargo "typstyle"
 cargo "wasm-bindgen-cli"
 cargo "wasm-pack"

@@ -22,4 +22,3 @@ case ":${PATH}:" in
         ;;
 esac
 
-eval "$(/opt/homebrew/bin/brew shellenv)"

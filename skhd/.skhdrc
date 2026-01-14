@@ -136,7 +136,7 @@ ctrl - k : yabai -m window --focus north
 ctrl - l : yabai -m window --focus east
 ctrl - f : yabai -m window --focus mouse
 alt - f : yabai -m window --toggle float
-ctrl - return : yabai -m window --toggle float --grid 25:25:1:1:23:23
+ctrl - return : yabai -m window --toggle float --grid 30:30:1:1:28:28
 cmd + alt - h : yabai -m window --swap west
 cmd + alt - j : yabai -m window --swap south
 cmd + alt - k : yabai -m window --swap north

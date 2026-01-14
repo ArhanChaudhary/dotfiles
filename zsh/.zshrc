@@ -5,8 +5,8 @@ if [[ "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select" || \
       "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select-wrapped" ]]; then
     zle -N zle-keymap-select "";
 fi
+eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
-eval $(thefuck --alias --enable-experimental-instant-mode)
 eval "$(zoxide init zsh)"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -20,6 +20,7 @@ alias cat=bat
 alias catt="cat -pp"
 alias cd=z
 alias hex="od -A n -t x1"
+alias zed=zed-preview
 
 # Added by LM Studio CLI
 export PATH="$PATH:/Users/arhan/.lmstudio/bin"
@@ -59,6 +60,7 @@ if [[ "$(defaults read -g AppleInterfaceStyle 2&>/dev/null)" != "Dark" ]]; then
 fi
 zinit light cantino/mcfly
 
+declare -U PATH path
 source <(COMPLETE=zsh jj)
 
 fastfetch

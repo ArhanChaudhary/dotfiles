@@ -1,15 +1,24 @@
 {
   "languages": {
     "Markdown": {
-      "show_edit_predictions": false
-    }
+      "show_edit_predictions": false,
+    },
+    "Shell Script": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "shfmt",
+          "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
+        },
+      },
+    },
   },
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "model": "gpt-5-mini",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
   "ssh_connections": [
     {
@@ -17,30 +26,30 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/home/robot/Desktop/rob-twophase"]
+          "paths": ["/home/robot/Desktop/rob-twophase"],
         },
         {
-          "paths": ["/home/robot"]
+          "paths": ["/home/robot"],
         },
         {
-          "paths": ["/home/robot/Desktop/qter/src/robot"]
-        }
-      ]
+          "paths": ["/home/robot/Desktop/qter/src/robot"],
+        },
+      ],
     },
     {
       "host": "mc19",
       "args": [],
       "projects": [
         {
-          "paths": []
-        }
-      ]
+          "paths": [],
+        },
+      ],
     },
     {
       "host": "data",
       "args": [],
-      "projects": []
-    }
+      "projects": [],
+    },
   ],
   "auto_install_extensions": {
     "astro": true,
@@ -55,11 +64,11 @@
     "svelte": true,
     "toml": true,
     "typst": true,
-    "wakatime": true
+    "wakatime": true,
   },
   "edit_predictions": {
     "mode": "subtle",
-    "disabled_globs": ["*.typ", "*.mdx", "*.md"]
+    "disabled_globs": ["*.typ", "*.mdx", "*.md"],
   },
   // Workspace restoration behavior.
   //   All workspaces ("last_session"), last workspace ("last_workspace") or "none"
@@ -80,51 +89,51 @@
       "update_debounce_ms": 150,
       "padding": 4,
       "min_column": 0,
-      "max_severity": null
-    }
+      "max_severity": null,
+    },
   },
 
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "copilot",
   },
   "icon_theme": "Bearded Icon Theme",
-  // "inlay_hints": {
-  //   "enabled": false
-  // },
+  "inlay_hints": {
+    "enabled": true,
+  },
   "buffer_font_features": {
-    "calt": 1
+    "calt": 1,
   },
   "ui_font_family": ".SystemUIFont",
   "preview_tabs": {
-    "enable_preview_from_file_finder": true
+    "enable_preview_from_file_finder": true,
   },
   "relative_line_numbers": "enabled",
   "gutter": {
-    "line_numbers": true
+    "line_numbers": true,
   },
   "minimap": {
-    "show": "never"
+    "show": "never",
   },
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000
-    }
+      "milliseconds": 1000,
+    },
   },
   "lsp": {
     "rust-analyzer": {
       "initialization_options": {
         "check": {
-          "command": "clippy"
+          "command": "clippy",
         },
         "inlayHints": {
           "maxLength": null,
           "lifetimeElisionHints": {
             "enable": "skip_trivial",
-            "useParameterNames": true
+            "useParameterNames": true,
           },
           "closureReturnTypeHints": {
-            "enable": "always"
-          }
+            "enable": "always",
+          },
         },
         "snippets": {
           "custom": {
@@ -132,31 +141,56 @@
               "postfix": "some",
               "body": ["Some(${receiver})"],
               "description": "Wrap the expression in an `Option::Some`",
-              "scope": "expr"
+              "scope": "expr",
             },
             "Ok": {
               "postfix": "ok",
               "body": ["Ok(${receiver})"],
               "description": "Wrap the expression in a `Result::Ok`",
-              "scope": "expr"
+              "scope": "expr",
             },
             "Err": {
               "postfix": "err",
               "body": "Err(${receiver})",
               "description": "Wrap the expression in a `Result::Err`",
-              "scope": "expr"
-            }
-          }
-        }
-      }
+              "scope": "expr",
+            },
+          },
+        },
+      },
     },
     "tinymist": {
       "settings": {
         "outputPath": "$root/$name",
         "formatterMode": "typstyle",
-        "formatterIndentSize": 4
-      }
-    }
+        "formatterIndentSize": 4,
+      },
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "classAttributes": ["class", "className", "ngClass", "styles"],
+        "includeLanguages": {
+          "rust": "html",
+        },
+        "experimental": {
+          "classRegex": [
+            "class=\"([^\"]*)",
+            "class={\"([^\"}]*)",
+            "class=format!({\"([^\"}]*)",
+
+            "\\.className\\s*[+]?=\\s*['\"]([^'\"]*)['\"]",
+            "\\.setAttributeNS\\(.*,\\s*['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "\\.setAttribute\\(['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "\\.classList\\.add\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.remove\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.toggle\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.contains\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.replace\\(\\s*['\"]([^'\"]*)['\"]",
+            "\\.classList\\.replace\\([^,)]+,\\s*['\"]([^'\"]*)['\"]",
+          ],
+        },
+      },
+    },
   },
   "linked_edits": true,
   "show_whitespaces": "none",
@@ -164,17 +198,88 @@
   "remove_trailing_whitespace_on_save": true,
   "wrap_guides": [80, 120],
   "file_types": {
-    "markdown": ["*.mdx"]
+    "markdown": ["*.mdx"],
+    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "JSON": ["json", "jsonc", "*.code-snippets"],
   },
   "telemetry": {
-    "metrics": false
+    "metrics": false,
+    "diagnostics": false,
   },
   "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "on_yank",
+  },
   "ui_font_size": 15,
   "buffer_font_size": 15,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "zedokai-darkest-machine"
-  }
+    "dark": "zedokai-darkest-machine",
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware",
+  },
+  "cursor_blink": false,
+
+  "profiles": {
+    "Focus": {
+      "ui_font_size": 16,
+      "buffer_font_size": 17,
+      "tab_bar": {
+        "show": false,
+      },
+      "toolbar": {
+        "breadcrumbs": false,
+        "quick_actions": false,
+      },
+      "gutter": {
+        "line_numbers": false,
+        "folds": false,
+        "breakpoints": false,
+        "runnables": false,
+        "min_line_number_digits": 0,
+      },
+      "current_line_highlight": "none",
+      "scrollbar": {
+        "show": "never",
+        "cursors": false,
+        "git_diff": false,
+        "diagnostics": "none",
+        "search_results": false,
+        "selected_symbol": false,
+      },
+    },
+  },
+  "centered_layout": {
+    "left_padding": 0.1,
+    "right_padding": 0.1,
+  },
+  "terminal": {
+    "env": {
+      "EDITOR": "zed --wait",
+    },
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // above is default from Zed
+    "**/out",
+    "**/.turbo",
+    "**/.vscode-test",
+    "**/.vscode",
+    "**/.next",
+    "**/.storybook",
+    "**/.tap",
+    "**/.nyc_output",
+    "**/report",
+    "**/node_modules",
+  ],
 }

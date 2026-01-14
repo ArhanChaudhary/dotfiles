@@ -78,4 +78,4 @@ grammar = "qter_q"
 
 [[grammar]]
 name = "qter_q"
-source = { git = "https://github.com/qter-project/tree-sitter-q/", rev = "ca02a019aa2d4019142d2dad71d5aa4a3c8db260" }
+source = { git = "https://github.com/qter-project/tree-sitter-q/", rev = "af56bc6adef54bf16f7074f5f93ea871b24f9fd4" }
