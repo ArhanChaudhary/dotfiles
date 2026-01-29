@@ -37,6 +37,8 @@ brew "openssl@3"
 brew "node"
 # Compiler for writing next generation JavaScript
 brew "babel"
+# GNU binary tools for native development
+brew "binutils"
 # Searches a binary image for embedded files and executable code
 brew "binwalk"
 # Collection of portable C++ source libraries
@@ -45,6 +47,8 @@ brew "boost"
 brew "boost-python3"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Powerful, enterprise-ready, open source web server with automatic HTTPS
+brew "caddy"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
 # Next-generation test runner for Rust
@@ -53,12 +57,6 @@ brew "cargo-nextest"
 brew "gmp"
 # C library for multiple-precision floating-point computations
 brew "mpfr"
-# C library for the arithmetic of high precision complex numbers
-brew "libmpc"
-# GNU compiler collection
-brew "gcc"
-# Package compiler and linker metadata toolkit
-brew "pkgconf"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cross-platform make
@@ -117,7 +115,7 @@ brew "pango"
 brew "srt"
 # OCR (Optical Character Recognition) engine
 brew "tesseract"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg@2.8"
@@ -135,6 +133,10 @@ brew "fonttools", link: false
 brew "fprobe"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# C library for the arithmetic of high precision complex numbers
+brew "libmpc"
+# GNU compiler collection
+brew "gcc"
 # GNU debugger
 brew "gdb"
 # GitHub command-line tool
@@ -167,6 +169,8 @@ brew "lua"
 brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
 # Library for loading images as SDL surfaces and textures
@@ -201,6 +205,8 @@ brew "helix"
 brew "hexyl"
 # Improved top (interactive process viewer)
 brew "htop"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
 # Dex to Java decompiler
 brew "jadx"
 # Git-compatible distributed version control system
@@ -247,8 +253,6 @@ brew "nss"
 brew "numbat"
 # Modern shell for the GitHub era
 brew "nushell"
-# Open source computer vision library
-brew "opencv"
 # Development kit for the Java programming language
 brew "openjdk@11"
 # Swiss-army knife of markup format conversion
@@ -257,6 +261,8 @@ brew "pandoc"
 brew "parallel"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Object-relational database system
 brew "postgresql@14", restart_service: :changed
 # Convert bitmaps to vector graphics
@@ -267,6 +273,8 @@ brew "python-matplotlib"
 brew "qemu"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
+# Cross-platform application and UI framework
+brew "qt@5"
 # Develop and deploy code with zero configuration
 brew "railway"
 # Install various Ruby versions and implementations
@@ -289,6 +297,8 @@ brew "shellcheck"
 brew "shfmt"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
+# Command-line interface for https://speedtest.net bandwidth tests
+brew "speedtest-cli"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
@@ -317,8 +327,6 @@ brew "yarn"
 brew "zoxide"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Custom macOS statusbar with shell plugin, interaction and graph support
-brew "felixkratz/formulae/sketchybar"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
@@ -340,6 +348,8 @@ cask "gitkraken"
 cask "gstreamer-runtime"
 # Java IDE by JetBrains
 cask "intellij-idea"
+# Menu bar manager
+cask "jordanbaird-ice"
 # Keyboard customiser
 cask "karabiner-elements"
 # Minecraft modding platform
@@ -357,8 +367,6 @@ cask "stats"
 # Compatibility layer to run Windows applications
 cask "wine-stable"
 # Multiplayer code editor
-cask "zed"
-# Multiplayer code editor
 cask "zed@preview"
 cargo "bat"
 cargo "cargo-bisect-rustc"
@@ -367,6 +375,7 @@ cargo "cargo-expand"
 cargo "cargo-generate"
 cargo "cargo-leptos"
 cargo "cargo-llvm-cov"
+cargo "cargo-make"
 cargo "cargo-show-asm"
 cargo "cross"
 cargo "evcxr_repl"

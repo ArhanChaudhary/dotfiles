@@ -26,13 +26,13 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/home/robot/Desktop/rob-twophase"],
-        },
-        {
           "paths": ["/home/robot"],
         },
         {
           "paths": ["/home/robot/Desktop/qter/src/robot"],
+        },
+        {
+          "paths": ["/home/robot/Desktop/rob-twophase"],
         },
       ],
     },
@@ -47,6 +47,37 @@
     },
     {
       "host": "data",
+      "args": [],
+      "projects": [],
+    },
+    {
+      "host": "vulcan",
+      "args": [],
+      "projects": [],
+    },
+    {
+      "host": "eceprog",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/shay/a/chaudh65"],
+        },
+      ],
+    },
+    {
+      "host": "xinu",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/homes/chaudh65"],
+        },
+        {
+          "paths": ["/homes/chaudh65/cs354/lab1-part1/xinu-spring2026"],
+        },
+      ],
+    },
+    {
+      "host": "eceprog",
       "args": [],
       "projects": [],
     },
@@ -135,25 +166,54 @@
             "enable": "always",
           },
         },
-        "snippets": {
-          "custom": {
-            "Some": {
-              "postfix": "some",
-              "body": ["Some(${receiver})"],
-              "description": "Wrap the expression in an `Option::Some`",
-              "scope": "expr",
-            },
-            "Ok": {
-              "postfix": "ok",
-              "body": ["Ok(${receiver})"],
-              "description": "Wrap the expression in a `Result::Ok`",
-              "scope": "expr",
-            },
-            "Err": {
-              "postfix": "err",
-              "body": "Err(${receiver})",
-              "description": "Wrap the expression in a `Result::Err`",
-              "scope": "expr",
+        "completion": {
+          "snippets": {
+            "custom": {
+              "println": {
+                "postfix": "pl",
+                "body": "println!(\"{:?}\", ${receiver});",
+                "description": "Print the expression using Debug formatting",
+                "scope": "expr",
+              },
+              "Ok": {
+                "postfix": "ok",
+                "body": "Ok(${receiver})",
+                "description": "Wrap the expression in a `Result::Ok`",
+                "scope": "expr",
+              },
+              "Box::pin": {
+                "postfix": "pinbox",
+                "body": "Box::pin(${receiver})",
+                "requires": "std::boxed::Box",
+                "description": "Put the expression into a pinned `Box`",
+                "scope": "expr",
+              },
+              "Arc::new": {
+                "postfix": "arc",
+                "body": "Arc::new(${receiver})",
+                "requires": "std::sync::Arc",
+                "description": "Put the expression into an `Arc`",
+                "scope": "expr",
+              },
+              "Some": {
+                "postfix": "some",
+                "body": "Some(${receiver})",
+                "description": "Wrap the expression in an `Option::Some`",
+                "scope": "expr",
+              },
+              "Err": {
+                "postfix": "err",
+                "body": "Err(${receiver})",
+                "description": "Wrap the expression in a `Result::Err`",
+                "scope": "expr",
+              },
+              "Rc::new": {
+                "postfix": "rc",
+                "body": "Rc::new(${receiver})",
+                "requires": "std::rc::Rc",
+                "description": "Put the expression into an `Rc`",
+                "scope": "expr",
+              },
             },
           },
         },
@@ -235,11 +295,9 @@
         "quick_actions": false,
       },
       "gutter": {
-        "line_numbers": false,
         "folds": false,
         "breakpoints": false,
         "runnables": false,
-        "min_line_number_digits": 0,
       },
       "current_line_highlight": "none",
       "scrollbar": {

@@ -20,7 +20,8 @@ source install.sh
 - Package manager: Homebrew
 - Text editor: Helix
 - Window manager: Yabai
-- Menu bar: Sketchybar
+- Menu bar: Ice
+- Menu bar extensions: SpaceName (using Hammerspoon)
 - App launcher: Raycast
 - Keymapper: Karabiner-Elements
 - Hotkey manager: skhd

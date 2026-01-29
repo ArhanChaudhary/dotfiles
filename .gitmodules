@@ -1,0 +1,3 @@
+[submodule "hammerspoon/.hammerspoon/Spoons/SpaceName.spoon"]
+	path = hammerspoon/.hammerspoon/Spoons/SpaceName.spoon
+	url = https://github.com/ekalinin/SpaceName.git

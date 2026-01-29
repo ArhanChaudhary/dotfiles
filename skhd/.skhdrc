@@ -116,6 +116,9 @@
 
 ctrl - right : yabai -m space --focus next
 ctrl - left : yabai -m space --focus prev
+alt - h : yabai -m window --space next && yabai -m space --focus next && sleep 0.1 && yabai -m window --focus mouse
+alt - l : yabai -m window --space prev && yabai -m space --focus prev && sleep 0.1 && yabai -m window --focus mouse
+alt - m : yabai -m window --minimize
 ctrl - 1 : yabai -m space --focus 1
 ctrl - 2 : yabai -m space --focus 2
 ctrl - 3 : yabai -m space --focus 3

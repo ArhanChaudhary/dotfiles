@@ -27,7 +27,7 @@ yabai -m config                                 \
     normal_window_opacity        0.9            \
     window_opacity               off            \
     insert_feedback_color        0xffd75f5f     \
-    external_bar                 all:40:0       \
+    external_bar                 off            \
     split_ratio                  0.50           \
     split_type                   auto           \
     auto_balance                 off            \
