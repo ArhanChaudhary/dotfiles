@@ -337,7 +337,6 @@ brew "oven-sh/bun/bun"
 cask "beeper"
 cask "font-sf-mono"
 cask "font-sf-pro"
-cask "font-sketchybar-app-font"
 # Pre-built GNU bare-metal toolchain for 32-bit Arm processors
 cask "gcc-arm-embedded"
 # Terminal emulator that uses platform-native UI and GPU acceleration
