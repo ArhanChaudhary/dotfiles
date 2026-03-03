@@ -15,16 +15,17 @@ source install.sh
 
 - Shell: Zsh
 - IDE: Zed
+- Browser: Zen
 - Terminal: Ghostty
 - Prompt: Starship
 - Package manager: Homebrew
 - Text editor: Helix
-- Window manager: Yabai
+- Window manager: PaperWM.spoon
 - Menu bar: Ice
-- Menu bar extensions: SpaceName (using Hammerspoon)
 - App launcher: Raycast
 - Keymapper: Karabiner-Elements
-- Hotkey manager: skhd
+- Hammerspoon extensions: spaceName, mouseFollowsFocus, Swipe
+- Misc: AutoRaise, Shortcat, InstantSpaceSwitcher
 
 Please note that my dotfiles are tailored to my specific use, and I have not made any attempt to make my configuration general purpose.
 

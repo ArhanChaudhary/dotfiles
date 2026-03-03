@@ -1,0 +1,17 @@
+pollMillis=50
+delay=1
+focusDelay=0
+warpX=1.0
+warpY=1.0
+scale=1.0
+# don't turn this on or else the mouse randomly jumps everywhere
+altTaskSwitcher=false
+requireMouseStop=false
+ignoreSpaceChanged=false
+invertDisableKey=true
+invertIgnoreApps=false
+ignoreApps=""
+ignoreTitles=""
+stayFocusedBundleIds="com.apple.SecurityAgent"
+disableKey="control"
+mouseDelta=0

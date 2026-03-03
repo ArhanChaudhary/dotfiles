@@ -12,6 +12,16 @@
         },
       },
     },
+    "Lua": {
+      "format_on_save": "on",
+      "formatter": "language_server",
+      "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true,
+      },
+    },
   },
   "agent": {
     "default_model": {
@@ -26,61 +36,99 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/home/robot"],
+          "paths": [
+            "/home/robot"
+          ]
         },
         {
-          "paths": ["/home/robot/Desktop/qter/src/robot"],
+          "paths": [
+            "/home/robot/Desktop/qter/src/robot"
+          ]
         },
         {
-          "paths": ["/home/robot/Desktop/rob-twophase"],
+          "paths": [
+            "/home/robot/Desktop/qvis/qvis_app"
+          ]
         },
-      ],
+        {
+          "paths": [
+            "/home/robot/Desktop/rob-twophase"
+          ]
+        }
+      ]
     },
     {
       "host": "mc19",
       "args": [],
       "projects": [
         {
-          "paths": [],
-        },
-      ],
+          "paths": []
+        }
+      ]
     },
     {
       "host": "data",
       "args": [],
-      "projects": [],
+      "projects": []
     },
     {
       "host": "vulcan",
       "args": [],
-      "projects": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/arhan/qter/src/cycle_combination_solver/src/phase2-GAP-experimental/./"
+          ]
+        },
+        {
+          "paths": [
+            "/home/arhan/x64alu"
+          ]
+        }
+      ]
     },
     {
       "host": "eceprog",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/shay/a/chaudh65"],
-        },
-      ],
+          "paths": [
+            "/home/shay/a/chaudh65"
+          ]
+        }
+      ]
     },
     {
       "host": "xinu",
       "args": [],
       "projects": [
         {
-          "paths": ["/homes/chaudh65"],
+          "paths": [
+            "/homes/chaudh65"
+          ]
         },
         {
-          "paths": ["/homes/chaudh65/cs354/lab1-part1/xinu-spring2026"],
+          "paths": [
+            "/homes/chaudh65/cs354/lab1-part1/xinu-spring2026"
+          ]
         },
-      ],
+        {
+          "paths": [
+            "/homes/chaudh65/cs354/lab1-part2"
+          ]
+        }
+      ]
     },
     {
       "host": "eceprog",
       "args": [],
-      "projects": [],
+      "projects": []
     },
+    {
+      "host": "qter1",
+      "args": [],
+      "projects": []
+    }
   ],
   "auto_install_extensions": {
     "astro": true,
@@ -98,6 +146,7 @@
     "wakatime": true,
   },
   "edit_predictions": {
+    "provider": "copilot",
     "mode": "subtle",
     "disabled_globs": ["*.typ", "*.mdx", "*.md"],
   },
@@ -118,14 +167,10 @@
     "inline": {
       "enabled": true,
       "update_debounce_ms": 150,
-      "padding": 4,
+      "padding": 2,
       "min_column": 0,
       "max_severity": null,
     },
-  },
-
-  "features": {
-    "edit_prediction_provider": "copilot",
   },
   "icon_theme": "Bearded Icon Theme",
   "inlay_hints": {
@@ -316,7 +361,7 @@
   },
   "terminal": {
     "env": {
-      "EDITOR": "zed --wait",
+      "EDITOR": "hx",
     },
   },
   "file_scan_exclusions": [
@@ -340,4 +385,5 @@
     "**/report",
     "**/node_modules",
   ],
+  "semantic_tokens": "combined",
 }

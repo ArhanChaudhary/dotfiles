@@ -15,10 +15,10 @@ brew "cairo"
 brew "harfbuzz"
 # Java build tool
 brew "ant"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
 # New file format for still image compression
 brew "jpeg-xl"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
 # Tool for reverse engineering 3rd party, closed, binary Android apps
@@ -101,30 +101,24 @@ brew "enscript"
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Image processing and image analysis library
-brew "leptonica"
-# Subtitle renderer for the ASS/SSA subtitle format
-brew "libass"
-# C library SSHv1/SSHv2 client and server protocols
-brew "libssh"
 # VP8/VP9 video codec
 brew "libvpx"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# Subtitle renderer for the ASS/SSA subtitle format
+brew "libass"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg@2.8"
+# Image processing and image analysis library
+brew "leptonica"
 # Framework for layout and rendering of i18n text
 brew "pango"
 # Secure Reliable Transport
 brew "srt"
 # OCR (Optical Character Recognition) engine
 brew "tesseract"
-# Play, record, convert, and stream select audio and video codecs
-brew "ffmpeg"
-# Play, record, convert, and stream audio and video
-brew "ffmpeg@2.8"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg@4"
-# Toolkit for image loading and pixel buffer manipulation
-brew "gdk-pixbuf"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # Generate pixel-perfect macOS folder icons in the native style
 brew "folderify"
 # Library for manipulating fonts
@@ -139,6 +133,8 @@ brew "libmpc"
 brew "gcc"
 # GNU debugger
 brew "gdb"
+# Toolkit for image loading and pixel buffer manipulation
+brew "gdk-pixbuf"
 # GitHub command-line tool
 brew "gh"
 # Interpreter for PostScript and PDF
@@ -193,6 +189,8 @@ brew "pygobject3"
 brew "scipy"
 # Efficient network analysis for Python 3
 brew "graph-tool"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # GNU Ubiquitous Intelligent Language for Extensions
@@ -219,6 +217,8 @@ brew "libagg"
 brew "libfido2"
 # Low level NFC SDK and Programmers API
 brew "libnfc"
+# C library SSHv1/SSHv2 client and server protocols
+brew "libssh"
 # XML security library
 brew "libxmlsec1"
 # YAML Parser
@@ -269,10 +269,16 @@ brew "postgresql@14", restart_service: :changed
 brew "potrace"
 # Python library for creating static, animated, and interactive visualizations
 brew "python-matplotlib"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Generic machine emulator and virtualizer
 brew "qemu"
+# Modern man page viewer
+brew "qman"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
+# Cross-platform application and UI framework
+brew "qt"
 # Cross-platform application and UI framework
 brew "qt@5"
 # Develop and deploy code with zero configuration
@@ -287,6 +293,8 @@ brew "ren"
 brew "rename"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
 # Build tool for Scala projects
 brew "sbt"
 # Multi-media library with bindings for multiple languages
@@ -327,8 +335,8 @@ brew "yarn"
 brew "zoxide"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Simple hotkey-daemon for macOS.
-brew "koekeishiya/formulae/skhd"
+# Focus-follows-mouse for MacOS
+brew "dimentium/autoraise/autoraise", args: ["with-dalternative_task_switcher"]
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
@@ -359,6 +367,8 @@ cask "raycast"
 cask "sage"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
+# App that enables mouse-free UI interaction
+cask "shortcat"
 # Compiler for the Standard ML '97 programming language
 cask "smlnj"
 # System monitor for the menu bar
@@ -367,7 +377,10 @@ cask "stats"
 cask "wine-stable"
 # Multiplayer code editor
 cask "zed@preview"
+# Gecko based web browser
+cask "zen"
 cargo "bat"
+cargo "cargo-binstall"
 cargo "cargo-bisect-rustc"
 cargo "cargo-cache"
 cargo "cargo-expand"

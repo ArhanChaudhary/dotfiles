@@ -18,6 +18,7 @@ alias ls="eza --git --group-directories-first"
 alias g=git
 alias cat=bat
 alias catt="cat -pp"
+alias man=qman
 alias cd=z
 alias hex="od -A n -t x1"
 alias zed=zed-preview
