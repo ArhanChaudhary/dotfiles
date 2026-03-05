@@ -13,5 +13,5 @@ invertIgnoreApps=false
 ignoreApps=""
 ignoreTitles=""
 stayFocusedBundleIds="com.apple.SecurityAgent"
-disableKey="control"
+disableKey="option"
 mouseDelta=0

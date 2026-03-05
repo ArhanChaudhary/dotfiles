@@ -3,13 +3,8 @@
   "runtime.version": "Lua 5.4",
   "format.enable": true,
   "hint.enable": true,
-  "diagnostics.globals": ["spaceName", "mouseFollowsFocus", "hs",
-        "log",
-        "ctrlTap",
-        "disableMMF",
-        "prevRight",
-        "allow",
-        "mult",
-        "actions",
-        "current_id"]
+  "diagnostics.globals": [
+    "spoon",
+    "hs"
+  ]
 }

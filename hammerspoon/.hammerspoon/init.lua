@@ -10,11 +10,54 @@ PaperWM = hs.loadSpoon("PaperWM")
 spaceName = hs.loadSpoon("SpaceName")
 mouseFollowsFocus = hs.loadSpoon("MouseFollowsFocus")
 Swipe = hs.loadSpoon("Swipe")
-log = hs.logger.new("dotfiles", "info")
 
 spaceName:start()
 
-PaperWM:bindHotkeys(
+Actions = PaperWM.actions.actions()
+Actions.split_screen_left = function()
+    local focused_window = hs.window.focusedWindow()
+    if not focused_window then
+        PaperWM.logger.d("focused window not found")
+        return
+    end
+
+    local focused_index = PaperWM.state.windowIndex(focused_window)
+    if not focused_index then
+        PaperWM.logger.e("focused index not found")
+        return
+    end
+
+    local left_column = PaperWM.state.windowList(focused_index.space, focused_index.col - 1)
+    local current_column = PaperWM.state.windowList(focused_index.space, focused_index.col)
+    if not left_column or not current_column then
+        PaperWM.logger.d("required columns not found")
+        return
+    end
+
+    local canvas = PaperWM.windows.getCanvas(focused_window:screen())
+
+    local half_width = canvas.w // 2
+
+    local left_bounds = {
+        x = canvas.x,
+        y = canvas.y,
+        y2 = canvas.y2
+    }
+
+    local current_bounds = {
+        x = canvas.x + half_width,
+        y = canvas.y,
+        y2 = canvas.y2
+    }
+
+    PaperWM.tiling.tileColumn(left_column, left_bounds, nil, half_width - PaperWM.windows.getGap("left"))
+    PaperWM.tiling.tileColumn(current_column, current_bounds, nil, half_width)
+    PaperWM.tiling.tileSpace(focused_index.space)
+    mouseFollowsFocus:updateMouse(PaperWM.state.prev_focused_window)
+end
+
+hs.spoons.bindHotkeysToSpec(
+    Actions,
     {
         -- switch to a new focused window in tiled grid
         -- focus_left = {{"ctrl"}, "h"},
@@ -44,12 +87,12 @@ PaperWM:bindHotkeys(
         -- decrease_width = {{"ctrl"}, "m"},
 
         -- move focused window into / out of a column
-        slurp_in = {{"ctrl", "shift"}, "i"},
-        barf_out = {{"ctrl", "shift"}, "o"},
+        slurp_in = {{"alt"}, "s"},
+        barf_out = {{"alt", "shift"}, "s"},
         -- move the focused window into / out of the tiling layer
         toggle_floating = {{"alt"}, "f"},
         -- raise all floating windows on top of tiled windows
-        focus_floating = {{"alt", "cmd", "shift"}, "f"},
+        focus_floating = {{"alt", "shift"}, "f"},
         -- focus the first / second / etc window in the current space
         focus_window_1 = {{"alt"}, "1"},
         focus_window_2 = {{"alt"}, "2"},
@@ -74,7 +117,7 @@ PaperWM:bindHotkeys(
         -- switch_space_9 = {{"alt", "cmd"}, "9"},
 
         -- move focused window to a new space and tile
-        -- TODO
+        -- TODO that pr
         move_window_1 = {{"alt", "shift"}, "1"},
         move_window_2 = {{"alt", "shift"}, "2"},
         move_window_3 = {{"alt", "shift"}, "3"},
@@ -83,10 +126,11 @@ PaperWM:bindHotkeys(
         move_window_6 = {{"alt", "shift"}, "6"},
         move_window_7 = {{"alt", "shift"}, "7"},
         move_window_8 = {{"alt", "shift"}, "8"},
-        move_window_9 = {{"alt", "shift"}, "9"}
+        move_window_9 = {{"alt", "shift"}, "9"},
+
+        split_screen_left = {{"ctrl"}, "s"},
     }
 )
-Actions = PaperWM.actions.actions()
 
 PaperWM.window_filter:rejectApp("iStat Menus Status")
 PaperWM.window_ratios = { 1/2, 2/3, 1 }
@@ -94,26 +138,12 @@ PaperWM.window_gap = { top = 4, left = 8, bottom = 4, right = 8 }
 PaperWM:start()
 
 DisableMMF = false
-LastWindowFocused = nil
-CheatTimeout = nil
 -- must make this global or it GC's
 CtrlTap = hs.eventtap.new(
     { hs.eventtap.event.types.flagsChanged, hs.eventtap.event.types.keyUp },
     function(event)
         local flags = event:getFlags()
-        local keyCode = event:getKeyCode()
-        DisableMMF = flags.ctrl and not (flags.cmd or flags.alt or flags.shift or flags.fn)
-        -- h and l keys
-        if keyCode == 4 or keyCode == 37 then
-            if CheatTimeout then
-                CheatTimeout:stop()
-            end
-            CheatTimeout = hs.timer.doAfter(0.15, function()
-                if LastWindowFocused then
-                    mouseFollowsFocus:updateMouse(LastWindowFocused)
-                end
-            end)
-        end
+        DisableMMF = flags.alt and not (flags.cmd or flags.ctrl or flags.shift or flags.fn)
         return false
     end
 )
@@ -126,11 +156,9 @@ hs.window.filter.new({override={
 }):subscribe({
     hs.window.filter.windowFocused
 }, function(window)
-    LastWindowFocused = window
-    if DisableMMF then
-        return
+    if not DisableMMF then
+        mouseFollowsFocus:updateMouse(window)
     end
-    mouseFollowsFocus:updateMouse(window)
 end)
 
 CurrentId = nil
@@ -158,12 +186,9 @@ Swipe:start(
         elseif direction == "right" then
             Actions.focus_left()
         elseif direction == "up" then
-            hs.execute("/Applications/ISSRight.app")
+            hs.eventtap.keyStroke({"ctrl"}, 'j')
         elseif direction == "down" then
-            hs.execute("/Applications/ISSLeft.app")
+            hs.eventtap.keyStroke({"ctrl"}, 'k')
         end
     end
 )
-
--- TODO keybind to split screen with ctrl+s
--- TODO SpoonInstall
