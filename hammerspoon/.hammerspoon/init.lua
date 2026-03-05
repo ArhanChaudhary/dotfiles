@@ -7,11 +7,11 @@ hs.window.highlight.ui.overlay = false
 hs.window.setShadows(false)
 
 PaperWM = hs.loadSpoon("PaperWM")
-spaceName = hs.loadSpoon("SpaceName")
-mouseFollowsFocus = hs.loadSpoon("MouseFollowsFocus")
+SpaceName = hs.loadSpoon("SpaceName")
+MouseFollowsFocus = hs.loadSpoon("MouseFollowsFocus")
 Swipe = hs.loadSpoon("Swipe")
 
-spaceName:start()
+SpaceName:start()
 
 Actions = PaperWM.actions.actions()
 Actions.split_screen_left = function()
@@ -53,7 +53,7 @@ Actions.split_screen_left = function()
     PaperWM.tiling.tileColumn(left_column, left_bounds, nil, half_width - PaperWM.windows.getGap("left"))
     PaperWM.tiling.tileColumn(current_column, current_bounds, nil, half_width)
     PaperWM.tiling.tileSpace(focused_index.space)
-    mouseFollowsFocus:updateMouse(PaperWM.state.prev_focused_window)
+    MouseFollowsFocus:updateMouse(PaperWM.state.prev_focused_window)
 end
 
 hs.spoons.bindHotkeysToSpec(
@@ -76,7 +76,7 @@ hs.spoons.bindHotkeysToSpec(
         swap_up = {{"alt"}, "k"},
         swap_down = {{"alt"}, "j"},
         -- position and resize focused window
-        center_window = {{"ctrl", "shift"}, "return"},
+        center_window = {{"alt"}, "return"},
         -- full_width = {{"ctrl"}, "return"},
         -- cycle_width = {{"ctrl"}, "return"},
         reverse_cycle_width = {{"ctrl"}, "return"},
@@ -157,7 +157,7 @@ hs.window.filter.new({override={
     hs.window.filter.windowFocused
 }, function(window)
     if not DisableMMF then
-        mouseFollowsFocus:updateMouse(window)
+        MouseFollowsFocus:updateMouse(window)
     end
 end)
 

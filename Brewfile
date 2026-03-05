@@ -359,6 +359,8 @@ cask "intellij-idea"
 cask "jordanbaird-ice"
 # Keyboard customiser
 cask "karabiner-elements"
+# Open-source keystroke visualiser
+cask "keycastr"
 # Minecraft modding platform
 cask "modrinth"
 # Control your tools with a few keystrokes
