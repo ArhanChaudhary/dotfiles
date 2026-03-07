@@ -47,6 +47,10 @@ brew "boost"
 brew "boost-python3"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Powerful, lightweight programming language
+brew "lua"
+# Elegant Lua unit testing
+brew "busted"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
 # Interpreted, interactive, object-oriented programming language
@@ -159,8 +163,6 @@ brew "pinentry"
 brew "gnupg"
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg@1.4"
-# Powerful, lightweight programming language
-brew "lua"
 # Command-driven, interactive function plotting
 brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
@@ -225,6 +227,8 @@ brew "libxmlsec1"
 brew "libyaml"
 # Next-gen compiler infrastructure
 brew "llvm@19"
+# Language Server for the Lua language
+brew "lua-language-server"
 # Java-based project management
 brew "maven"
 # Simple tool to make locally trusted development certificates

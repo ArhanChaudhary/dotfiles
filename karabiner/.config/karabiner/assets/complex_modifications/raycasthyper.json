@@ -13,7 +13,7 @@
           "to": [
             {
               "key_code": "left_shift",
-              "modifiers": ["left_command", "left_control", "left_option"]
+              "modifiers": ["left_command", "left_control"]
             }
           ],
           "to_if_alone": [{ "key_code": "escape" }]
