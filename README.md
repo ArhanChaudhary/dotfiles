@@ -24,7 +24,7 @@ source install.sh
 - Menu bar: Ice
 - App launcher: Raycast
 - Keymapper: Karabiner-Elements
-- Hammerspoon extensions: spaceName, mouseFollowsFocus, Swipe
+- Hammerspoon extensions: SpaceName, MouseFollowsFocus, Swipe
 - Misc: AutoRaise, Shortcat, InstantSpaceSwitcher
 
 Please note that my dotfiles are tailored to my specific use, and I have not made any attempt to make my configuration general purpose.
