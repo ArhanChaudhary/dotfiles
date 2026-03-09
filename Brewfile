@@ -277,8 +277,6 @@ brew "python-matplotlib"
 brew "python@3.11"
 # Generic machine emulator and virtualizer
 brew "qemu"
-# Modern man page viewer
-brew "qman"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
 # Cross-platform application and UI framework

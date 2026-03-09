@@ -182,9 +182,9 @@ Swipe:start(
 
         LastExecutionTime = now
         if direction == "left" then
-            Actions.focus_right()
+            Actions.focus_next()
         elseif direction == "right" then
-            Actions.focus_left()
+            Actions.focus_prev()
         elseif direction == "up" then
             hs.eventtap.keyStroke({"ctrl"}, 'j')
         elseif direction == "down" then
