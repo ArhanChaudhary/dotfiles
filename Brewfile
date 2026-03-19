@@ -395,8 +395,6 @@ cask "wine-stable"
 # Multiplayer code editor
 cask "zed@preview"
 # Gecko based web browser
-cask "zen"
-# Gecko based web browser
 cask "zen@twilight"
 cargo "bat"
 cargo "cargo-binstall"
