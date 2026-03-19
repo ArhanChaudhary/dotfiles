@@ -230,6 +230,12 @@
                 "description": "Print the expression using Debug formatting",
                 "scope": "expr",
               },
+              "dbg": {
+                "postfix": "dbg",
+                "body": "dbg!(\"{:?}\", ${receiver});",
+                "description": "Debug the expression",
+                "scope": "expr",
+              },
               "Ok": {
                 "postfix": "ok",
                 "body": "Ok(${receiver})",

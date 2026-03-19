@@ -2,7 +2,6 @@ tap "adoptopenjdk/openjdk"
 tap "dimentium/autoraise"
 tap "felixkratz/formulae"
 tap "gap-system/gap"
-tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "oven-sh/bun"
 # XML-based font configuration API for X Windows
@@ -81,6 +80,8 @@ brew "grep"
 brew "crosstool-ng"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
+# Command-line utilities for working with desktop entries
+brew "desktop-file-utils"
 # Minimal, fast alternative to 'du -sh'
 brew "diskus"
 # Pack, ship and run any application as a lightweight container
@@ -123,6 +124,8 @@ brew "srt"
 brew "tesseract"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg@4"
+# Database of common MIME types
+brew "shared-mime-info"
 # Generate pixel-perfect macOS folder icons in the native style
 brew "folderify"
 # Library for manipulating fonts
@@ -195,6 +198,10 @@ brew "graph-tool"
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Integrates GTK macOS applications with the Mac desktop
+brew "gtk-mac-integration"
+# Toolkit for creating graphical user interfaces
+brew "gtk4"
 # GNU Ubiquitous Intelligent Language for Extensions
 brew "guile"
 # Proof-of-work algorithm to counter denial-of-service (DoS) attacks
@@ -213,6 +220,8 @@ brew "jadx"
 brew "jj"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Library for JSON, based on GLib
+brew "json-glib"
 # High fidelity 2D graphics library for C++
 brew "libagg"
 # Provides library functionality for FIDO U2F & FIDO 2.0, including USB
@@ -231,6 +240,10 @@ brew "llvm@19"
 brew "lua-language-server"
 # Java-based project management
 brew "maven"
+# Small build system for use with gyp or CMake
+brew "ninja"
+# Fast and user friendly build system
+brew "meson"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
 # Command-line music player client for mpd
@@ -243,8 +256,6 @@ brew "mysql-client"
 brew "ncdu"
 # HTTP/2 C Library
 brew "nghttp2"
-# Small build system for use with gyp or CMake
-brew "ninja"
 # Port scanning utility for large networks
 brew "nmap"
 # Tiny, lightning fast, feature-packed file manager
@@ -271,6 +282,8 @@ brew "pipx"
 brew "postgresql@14", restart_service: :changed
 # Convert bitmaps to vector graphics
 brew "potrace"
+# Advanced Python REPL
+brew "ptpython"
 # Python library for creating static, animated, and interactive visualizations
 brew "python-matplotlib"
 # Interpreted, interactive, object-oriented programming language
@@ -383,6 +396,8 @@ cask "wine-stable"
 cask "zed@preview"
 # Gecko based web browser
 cask "zen"
+# Gecko based web browser
+cask "zen@twilight"
 cargo "bat"
 cargo "cargo-binstall"
 cargo "cargo-bisect-rustc"

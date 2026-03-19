@@ -4,7 +4,6 @@ window-padding-x = 12
 window-padding-y = 12
 
 working-directory = "/Users/arhan/Projects"
-quit-after-last-window-closed = true
 font-size = 16
 cursor-color = f5e0dc
 cursor-text = 11111b

@@ -13,11 +13,12 @@ source <(fzf --zsh)
 # bun completions
 [ -s "/Users/arhan/.bun/_bun" ] && source "/Users/arhan/.bun/_bun"
 
-alias python=python3
+alias python=python3.14
 alias ls="eza --git --group-directories-first"
 alias g=git
 alias cat=bat
 alias catt="cat -pp"
+alias ptpy="ptpython --vi"
 alias cd=z
 alias hex="od -A n -t x1"
 alias zed=zed-preview
