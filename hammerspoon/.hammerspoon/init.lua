@@ -22,7 +22,6 @@ PaperWM:bindHotkeys({
 
     -- switch windows by cycling forward/backward
     -- (forward = down or right, backward = up or left)
-    -- TODO make this wrap
     focus_prev = { { "ctrl" }, "h" },
     focus_next = { { "ctrl" }, "l" },
     -- move windows around in tiled grid
@@ -73,7 +72,8 @@ PaperWM:bindHotkeys({
     -- switch_space_9 = {{"alt", "cmd"}, "9"},
 
     -- move focused window to a new space and tile
-    -- TODO that pr
+    move_window_l = { { "alt", "shift" }, "l" },
+    move_window_r = { { "alt", "shift" }, "h" },
     move_window_1 = { { "alt", "shift" }, "1" },
     move_window_2 = { { "alt", "shift" }, "2" },
     move_window_3 = { { "alt", "shift" }, "3" },
@@ -89,19 +89,20 @@ Actions = PaperWM.actions.actions()
 PaperWM.window_filter:rejectApp("iStat Menus Status")
 PaperWM.window_ratios = { 1 / 2, 2 / 3, 1 }
 PaperWM.window_gap = { top = 4, left = 8, bottom = 4, right = 8 }
+PaperWM.infinite_loop_window = true
 PaperWM:start()
 
-DisableMMF = false
+DisableMFF = false
 -- must make this global or it GC's
-CtrlTap = hs.eventtap.new(
+AltTap = hs.eventtap.new(
     { hs.eventtap.event.types.flagsChanged, hs.eventtap.event.types.keyUp },
     function(event)
         local flags = event:getFlags()
-        DisableMMF = flags.alt and not (flags.cmd or flags.ctrl or flags.shift or flags.fn)
+        DisableMFF = flags.alt and not (flags.cmd or flags.ctrl or flags.shift or flags.fn)
         return false
     end
 )
-CtrlTap:start()
+AltTap:start()
 
 hs.window.filter.new({
     override = {
@@ -112,7 +113,7 @@ hs.window.filter.new({
 }):subscribe({
     hs.window.filter.windowFocused
 }, function(window)
-    if not DisableMMF then
+    if not DisableMFF then
         MouseFollowsFocus:updateMouse(window)
     end
 end)
@@ -142,9 +143,9 @@ Swipe:start(
         elseif direction == "right" then
             Actions.focus_prev()
         elseif direction == "up" then
-            hs.eventtap.keyStroke({ "ctrl" }, 'j')
+            hs.eventtap.keyStroke({ "ctrl" }, "j")
         elseif direction == "down" then
-            hs.eventtap.keyStroke({ "ctrl" }, 'k')
+            hs.eventtap.keyStroke({ "ctrl" }, "k")
         end
     end
 )

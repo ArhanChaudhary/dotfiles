@@ -352,12 +352,8 @@ brew "zoxide"
 brew "zsh-syntax-highlighting"
 # Focus-follows-mouse for MacOS
 brew "dimentium/autoraise/autoraise", args: ["with-dalternative_task_switcher"]
-# A tiling window manager for macOS based on binary space partitioning.
-brew "koekeishiya/formulae/yabai"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
-# Universal chat app powered by Matrix
-cask "beeper"
 cask "font-sf-mono"
 cask "font-sf-pro"
 # Pre-built GNU bare-metal toolchain for 32-bit Arm processors

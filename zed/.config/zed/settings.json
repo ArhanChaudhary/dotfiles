@@ -1,4 +1,5 @@
 {
+  "diff_view_style": "split",
   "languages": {
     "Markdown": {
       "show_edit_predictions": false,
@@ -36,40 +37,32 @@
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/home/robot"
-          ]
+          "paths": ["/home/robot"],
         },
         {
-          "paths": [
-            "/home/robot/Desktop/qter/src/robot"
-          ]
+          "paths": ["/home/robot/Desktop/qter/src/robot"],
         },
         {
-          "paths": [
-            "/home/robot/Desktop/qvis/qvis_app"
-          ]
+          "paths": ["/home/robot/Desktop/qvis/qvis_app"],
         },
         {
-          "paths": [
-            "/home/robot/Desktop/rob-twophase"
-          ]
-        }
-      ]
+          "paths": ["/home/robot/Desktop/rob-twophase"],
+        },
+      ],
     },
     {
       "host": "mc19",
       "args": [],
       "projects": [
         {
-          "paths": []
-        }
-      ]
+          "paths": [],
+        },
+      ],
     },
     {
       "host": "data",
       "args": [],
-      "projects": []
+      "projects": [],
     },
     {
       "host": "vulcan",
@@ -77,68 +70,54 @@
       "projects": [
         {
           "paths": [
-            "/home/arhan/qter/src/cycle_combination_solver/src/phase2-GAP-experimental/./"
-          ]
+            "/home/arhan/qter/src/cycle_combination_solver/src/phase2-GAP-experimental/./",
+          ],
         },
         {
-          "paths": [
-            "/home/arhan/x64alu"
-          ]
-        }
-      ]
+          "paths": ["/home/arhan/x64alu"],
+        },
+      ],
     },
     {
       "host": "eceprog",
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/home/shay/a/chaudh65"
-          ]
+          "paths": ["/home/shay/a/chaudh65"],
         },
         {
-          "paths": [
-            "/home/shay/a/chaudh65/Desktop/ece270"
-          ]
-        }
-      ]
+          "paths": ["/home/shay/a/chaudh65/Desktop/ece270"],
+        },
+      ],
     },
     {
       "host": "xinu",
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/homes/chaudh65"
-          ]
+          "paths": ["/homes/chaudh65"],
         },
         {
-          "paths": [
-            "/homes/chaudh65/cs354/lab1-part1/xinu-spring2026"
-          ]
+          "paths": ["/homes/chaudh65/cs354/lab1-part1/xinu-spring2026"],
         },
         {
-          "paths": [
-            "/homes/chaudh65/cs354/lab1-part2"
-          ]
+          "paths": ["/homes/chaudh65/cs354/lab1-part2"],
         },
         {
-          "paths": [
-            "/homes/chaudh65/cs354/lab3"
-          ]
-        }
-      ]
+          "paths": ["/homes/chaudh65/cs354/lab3"],
+        },
+      ],
     },
     {
       "host": "eceprog",
       "args": [],
-      "projects": []
+      "projects": [],
     },
     {
       "host": "qter1",
       "args": [],
-      "projects": []
-    }
+      "projects": [],
+    },
   ],
   "auto_install_extensions": {
     "astro": true,
@@ -156,6 +135,9 @@
     "wakatime": true,
   },
   "edit_predictions": {
+    "copilot": {
+      "enable_next_edit_suggestions": false,
+    },
     "provider": "copilot",
     "mode": "subtle",
     "disabled_globs": ["*.typ", "*.mdx", "*.md"],
