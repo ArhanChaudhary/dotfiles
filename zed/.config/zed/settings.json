@@ -1,4 +1,13 @@
 {
+  "code_lens": "on",
+  "cli_default_open_behavior": "new_window",
+  "jsx_tag_auto_close": {
+    "enabled": false,
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "disable_ai": true,
   "diff_view_style": "split",
   "languages": {
     "Markdown": {
@@ -57,21 +66,43 @@
         {
           "paths": [],
         },
+        {
+          "paths": ["/homes/chaudh65/rustjail"],
+        },
+        {
+          "paths": ["/homes/chaudh65/rustjail/src"],
+        },
       ],
     },
     {
       "host": "data",
       "args": [],
-      "projects": [],
+      "projects": [
+        {
+          "paths": ["/homes/chaudh65/cs354/lab4/xinu-spring2026/./"],
+        },
+        {
+          "paths": ["/homes/chaudh65/rustjail/src"],
+        },
+      ],
     },
     {
       "host": "vulcan",
       "args": [],
       "projects": [
         {
+          "paths": ["/home/arhan"],
+        },
+        {
           "paths": [
             "/home/arhan/qter/src/cycle_combination_solver/src/phase2-GAP-experimental/./",
           ],
+        },
+        {
+          "paths": ["/home/arhan/rustjail"],
+        },
+        {
+          "paths": ["/home/arhan/rustjail/src"],
         },
         {
           "paths": ["/home/arhan/x64alu"],
@@ -106,6 +137,12 @@
         {
           "paths": ["/homes/chaudh65/cs354/lab3"],
         },
+        {
+          "paths": ["/homes/chaudh65/cs354/lab4/xinu-spring2026/./"],
+        },
+        {
+          "paths": ["/homes/chaudh65/cs354/lab5/xinu-spring2026/./"],
+        },
       ],
     },
     {
@@ -115,6 +152,16 @@
     },
     {
       "host": "qter1",
+      "args": [],
+      "projects": [],
+    },
+    {
+      "host": "vulcan",
+      "args": [],
+      "projects": [],
+    },
+    {
+      "host": "xinu",
       "args": [],
       "projects": [],
     },
@@ -164,7 +211,11 @@
       "max_severity": null,
     },
   },
-  "icon_theme": "Bearded Icon Theme",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Bearded Icon Theme",
+    "dark": "Bearded Icon Theme",
+  },
   "inlay_hints": {
     "enabled": true,
   },
@@ -190,6 +241,9 @@
   "lsp": {
     "rust-analyzer": {
       "initialization_options": {
+        "cargo": {
+          "allFeatures": true,
+        },
         "check": {
           "command": "clippy",
         },
@@ -206,6 +260,12 @@
         "completion": {
           "snippets": {
             "custom": {
+              "ae": {
+                "postfix": "ae",
+                "body": "assert_eq!(${receiver}, );",
+                "description": "Assert equal with something",
+                "scope": "expr",
+              },
               "println": {
                 "postfix": "pl",
                 "body": "println!(\"{:?}\", ${receiver});",
@@ -299,7 +359,6 @@
   "show_whitespaces": "none",
   "show_edit_predictions": true,
   "remove_trailing_whitespace_on_save": true,
-  "wrap_guides": [80, 120],
   "file_types": {
     "markdown": ["*.mdx"],
     "Dockerfile": ["Dockerfile", "Dockerfile.*"],
@@ -316,7 +375,7 @@
   "ui_font_size": 15,
   "buffer_font_size": 15,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
     "dark": "zedokai-darkest-machine",
   },
@@ -328,28 +387,33 @@
 
   "profiles": {
     "Focus": {
-      "ui_font_size": 16,
-      "buffer_font_size": 17,
-      "tab_bar": {
-        "show": false,
-      },
-      "toolbar": {
-        "breadcrumbs": false,
-        "quick_actions": false,
-      },
-      "gutter": {
-        "folds": false,
-        "breakpoints": false,
-        "runnables": false,
-      },
-      "current_line_highlight": "none",
-      "scrollbar": {
-        "show": "never",
-        "cursors": false,
-        "git_diff": false,
-        "diagnostics": "none",
-        "search_results": false,
-        "selected_symbol": false,
+      "settings": {
+        "ui_font_size": 16,
+        "buffer_font_size": 17,
+        "tab_bar": {
+          "show": false,
+        },
+        "toolbar": {
+          "breadcrumbs": false,
+          "quick_actions": false,
+        },
+        "gutter": {
+          "folds": false,
+          "breakpoints": false,
+          "runnables": false,
+        },
+        "git": {
+          "git_gutter": "hide",
+        },
+        "current_line_highlight": "none",
+        "scrollbar": {
+          "show": "never",
+          "cursors": false,
+          "git_diff": false,
+          "diagnostics": "none",
+          "search_results": false,
+          "selected_symbol": false,
+        },
       },
     },
   },

@@ -2,6 +2,7 @@ tap "adoptopenjdk/openjdk"
 tap "dimentium/autoraise"
 tap "felixkratz/formulae"
 tap "gap-system/gap"
+tap "jurplel/tap"
 tap "koekeishiya/formulae"
 tap "oven-sh/bun"
 # XML-based font configuration API for X Windows
@@ -12,6 +13,8 @@ brew "glib"
 brew "cairo"
 # OpenType text shaping engine
 brew "harfbuzz"
+# Development kit for the Java programming language
+brew "openjdk"
 # Java build tool
 brew "ant"
 # New file format for still image compression
@@ -320,6 +323,8 @@ brew "shellcheck"
 brew "shfmt"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
+# Compiler and programming system for Standard ML
+brew "smlnj", link: false
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
 # Cross-shell prompt for astronauts
@@ -364,6 +369,8 @@ cask "ghostty"
 cask "gitkraken"
 # Open Source Multimedia Framework
 cask "gstreamer-runtime"
+# Native instant workspace switching
+cask "jurplel/tap/instant-space-switcher"
 # Java IDE by JetBrains
 cask "intellij-idea"
 # Menu bar manager
@@ -414,3 +421,20 @@ cargo "trunk"
 cargo "typstyle"
 cargo "wasm-bindgen-cli"
 cargo "wasm-pack"
+npm "@babel/preset-env"
+npm "@railway/cli"
+npm "@types/node"
+npm "cssnano"
+npm "eslint"
+npm "gitinspector"
+npm "matrix-rain"
+npm "npm-check-updates"
+npm "p-map"
+npm "purgecss"
+npm "request"
+npm "retypeapp"
+npm "serve"
+npm "ts-node"
+npm "typescript-formatter"
+npm "typescript"
+npm "workbox-cli"

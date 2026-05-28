@@ -7,6 +7,14 @@
 // from the command palette.
 [
   {
+    "context": "Editor && VimControl && !menu",
+    "bindings": {
+      "j": ["vim::Down", { "display_lines": true }],
+      "k": ["vim::Up", { "display_lines": true }],
+    },
+  },
+
+  {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "bindings": {
       "q": "vim::AnyQuotes",
