@@ -10,8 +10,6 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
-# bun completions
-[ -s "/Users/arhan/.bun/_bun" ] && source "/Users/arhan/.bun/_bun"
 
 # Changing directories
 setopt AUTO_CD           # Change directories by just typing the name of the directory as if it's a command.
@@ -57,12 +55,6 @@ alias ptpy="ptpython --vi"
 alias cd=z
 alias hex="od -A n -t x1"
 alias zed=zed-preview
-
-# Added by LM Studio CLI
-export PATH="$PATH:/Users/arhan/.lmstudio/bin"
-
-# Added by Antigravity
-export PATH="/Users/arhan/.antigravity/antigravity/bin:$PATH"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then

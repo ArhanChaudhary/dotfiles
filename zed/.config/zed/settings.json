@@ -1,4 +1,5 @@
 {
+  "confirm_quit": true,
   "code_lens": "on",
   "cli_default_open_behavior": "new_window",
   "jsx_tag_auto_close": {
@@ -46,124 +47,175 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/home/robot"],
+          "paths": [
+            "/home/robot"
+          ]
         },
         {
-          "paths": ["/home/robot/Desktop/qter/src/robot"],
+          "paths": [
+            "/home/robot/Desktop/qter/src/robot"
+          ]
         },
         {
-          "paths": ["/home/robot/Desktop/qvis/qvis_app"],
+          "paths": [
+            "/home/robot/Desktop/qvis/qvis_app"
+          ]
         },
         {
-          "paths": ["/home/robot/Desktop/rob-twophase"],
-        },
-      ],
+          "paths": [
+            "/home/robot/Desktop/rob-twophase"
+          ]
+        }
+      ]
     },
     {
       "host": "mc19",
       "args": [],
       "projects": [
         {
-          "paths": [],
+          "paths": []
         },
         {
-          "paths": ["/homes/chaudh65/rustjail"],
+          "paths": [
+            "/homes/chaudh65/rustjail"
+          ]
         },
         {
-          "paths": ["/homes/chaudh65/rustjail/src"],
-        },
-      ],
+          "paths": [
+            "/homes/chaudh65/rustjail/src"
+          ]
+        }
+      ]
     },
     {
       "host": "data",
       "args": [],
       "projects": [
         {
-          "paths": ["/homes/chaudh65/cs354/lab4/xinu-spring2026/./"],
+          "paths": [
+            "/homes/chaudh65/cs354/lab4/xinu-spring2026/./"
+          ]
         },
         {
-          "paths": ["/homes/chaudh65/rustjail/src"],
-        },
-      ],
+          "paths": [
+            "/homes/chaudh65/rustjail/src"
+          ]
+        }
+      ]
     },
     {
       "host": "vulcan",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/arhan"],
+          "paths": [
+            "/home/arhan"
+          ]
         },
         {
           "paths": [
-            "/home/arhan/qter/src/cycle_combination_solver/src/phase2-GAP-experimental/./",
-          ],
+            "/home/arhan/qter/src/cycle_combination_solver/src/phase2-GAP-experimental/./"
+          ]
         },
         {
-          "paths": ["/home/arhan/rustjail"],
+          "paths": [
+            "/home/arhan/rustjail"
+          ]
         },
         {
-          "paths": ["/home/arhan/rustjail/src"],
+          "paths": [
+            "/home/arhan/rustjail/src"
+          ]
         },
         {
-          "paths": ["/home/arhan/x64alu"],
-        },
-      ],
+          "paths": [
+            "/home/arhan/x64alu"
+          ]
+        }
+      ]
     },
     {
       "host": "eceprog",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/shay/a/chaudh65"],
+          "paths": [
+            "/home/shay/a/chaudh65"
+          ]
         },
         {
-          "paths": ["/home/shay/a/chaudh65/Desktop/ece270"],
-        },
-      ],
+          "paths": [
+            "/home/shay/a/chaudh65/Desktop/ece270"
+          ]
+        }
+      ]
     },
     {
       "host": "xinu",
       "args": [],
       "projects": [
         {
-          "paths": ["/homes/chaudh65"],
+          "paths": [
+            "/homes/chaudh65"
+          ]
         },
         {
-          "paths": ["/homes/chaudh65/cs354/lab1-part1/xinu-spring2026"],
+          "paths": [
+            "/homes/chaudh65/cs354/lab1-part1/xinu-spring2026"
+          ]
         },
         {
-          "paths": ["/homes/chaudh65/cs354/lab1-part2"],
+          "paths": [
+            "/homes/chaudh65/cs354/lab1-part2"
+          ]
         },
         {
-          "paths": ["/homes/chaudh65/cs354/lab3"],
+          "paths": [
+            "/homes/chaudh65/cs354/lab3"
+          ]
         },
         {
-          "paths": ["/homes/chaudh65/cs354/lab4/xinu-spring2026/./"],
+          "paths": [
+            "/homes/chaudh65/cs354/lab4/xinu-spring2026/./"
+          ]
         },
         {
-          "paths": ["/homes/chaudh65/cs354/lab5/xinu-spring2026/./"],
-        },
-      ],
+          "paths": [
+            "/homes/chaudh65/cs354/lab5/xinu-spring2026/./"
+          ]
+        }
+      ]
     },
     {
       "host": "eceprog",
       "args": [],
-      "projects": [],
+      "projects": []
     },
     {
       "host": "qter1",
       "args": [],
-      "projects": [],
+      "projects": []
     },
     {
       "host": "vulcan",
       "args": [],
-      "projects": [],
+      "projects": []
     },
     {
       "host": "xinu",
       "args": [],
-      "projects": [],
+      "projects": []
+    },
+    {
+      "host": "qter2-vm",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/qterer/qter/src/cycle_combination_finder/./"
+          ]
+        }
+      ]
     },
   ],
   "auto_install_extensions": {
@@ -239,6 +291,12 @@
     },
   },
   "lsp": {
+    "cargo-tom": {
+      "initialization_options": {
+        "sort_format": true,
+        "hide_docs_info_message": true,
+      }
+    },
     "rust-analyzer": {
       "initialization_options": {
         "cargo": {

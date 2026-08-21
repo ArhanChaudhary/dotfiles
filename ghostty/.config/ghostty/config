@@ -9,18 +9,17 @@ cursor-color = f5e0dc
 cursor-text = 11111b
 
 # https://sterba.dev/posts/replacing-tmux/
-keybind = ctrl+H=goto_split:left
-keybind = ctrl+J=goto_split:bottom
-keybind = ctrl+K=goto_split:top
-keybind = ctrl+L=goto_split:right
-
+keybind = ctrl+w>h=goto_split:left
+keybind = ctrl+w>j=goto_split:bottom
+keybind = ctrl+w>k=goto_split:top
+keybind = ctrl+w>l=goto_split:right
 keybind = alt+n>h=new_split:left
 keybind = alt+n>j=new_split:down
+
 keybind = alt+n>k=new_split:up
 keybind = alt+n>l=new_split:right
 keybind = alt+n>f=toggle_split_zoom
 
-unfocused-split-opacity = 0.75
 background-opacity = 0.6
 # ideal with is 72
 # subtract 2 because it resizes while opening

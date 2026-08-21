@@ -1,10 +1,11 @@
-tap "adoptopenjdk/openjdk"
-tap "dimentium/autoraise"
-tap "felixkratz/formulae"
-tap "gap-system/gap"
-tap "jurplel/tap"
-tap "koekeishiya/formulae"
-tap "oven-sh/bun"
+tap "adoptopenjdk/openjdk", trusted: true
+tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git", trusted: true
+tap "barutsrb/tap", "https://github.com/BarutSRB/homebrew-tap"
+tap "dimentium/autoraise", trusted: true
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
+tap "gap-system/gap", trusted: true
+tap "jurplel/tap", trusted: true
+tap "oven-sh/bun", trusted: true
 # XML-based font configuration API for X Windows
 brew "fontconfig"
 # Core application library for C
@@ -13,14 +14,12 @@ brew "glib"
 brew "cairo"
 # OpenType text shaping engine
 brew "harfbuzz"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
 # Development kit for the Java programming language
 brew "openjdk"
 # Java build tool
 brew "ant"
-# New file format for still image compression
-brew "jpeg-xl"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
 # Tool for reverse engineering 3rd party, closed, binary Android apps
@@ -55,14 +54,8 @@ brew "lua"
 brew "busted"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # Next-generation test runner for Rust
 brew "cargo-nextest"
-# GNU multiple precision arithmetic library
-brew "gmp"
-# C library for multiple-precision floating-point computations
-brew "mpfr"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cross-platform make
@@ -73,10 +66,14 @@ brew "cmatrix"
 brew "lima"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
+# GNU multiple precision arithmetic library
+brew "gmp"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
+# C library for multiple-precision floating-point computations
+brew "mpfr"
 # GNU grep, egrep and fgrep
 brew "grep"
 # Tool for building toolchains
@@ -88,7 +85,7 @@ brew "desktop-file-utils"
 # Minimal, fast alternative to 'du -sh'
 brew "diskus"
 # Pack, ship and run any application as a lightweight container
-brew "docker"
+brew "docker", link: false
 # Isolated development environments using Docker
 brew "docker-compose"
 # Create Docker hosts locally and on cloud providers
@@ -97,10 +94,12 @@ brew "docker-machine", restart_service: :changed
 brew "dos2unix"
 # Debian package management system
 brew "dpkg"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
+# YAML Parser
+brew "libyaml"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # GNU Emacs text editor
 brew "emacs"
 # Convert text to Postscript, HTML, or RTF, with syntax highlighting
@@ -127,6 +126,8 @@ brew "srt"
 brew "tesseract"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg@4"
+# New file format for still image compression
+brew "jpeg-xl"
 # Database of common MIME types
 brew "shared-mime-info"
 # Generate pixel-perfect macOS folder icons in the native style
@@ -181,26 +182,22 @@ brew "gobject-introspection"
 brew "sdl2_image"
 # Version Control Visualization Tool
 brew "gource"
-# GSettings schemas for desktop components
-brew "gsettings-desktop-schemas"
-# Toolkit for creating graphical user interfaces
-brew "gtk+3"
 # Package for scientific computing with Python
-brew "numpy"
-# Friendly PIL fork (Python Imaging Library)
-brew "pillow"
-# Python 3 bindings for the Cairo graphics library
-brew "py3cairo"
-# GNOME Python bindings (based on GObject Introspection)
-brew "pygobject3"
+brew "numpy", link: false
 # Software for mathematics, science, and engineering
 brew "scipy"
 # Efficient network analysis for Python 3
 brew "graph-tool"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # Library to render SVG files using Cairo
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# GSettings schemas for desktop components
+brew "gsettings-desktop-schemas"
+# Toolkit for creating graphical user interfaces
+brew "gtk+3"
 # Integrates GTK macOS applications with the Mac desktop
 brew "gtk-mac-integration"
 # Toolkit for creating graphical user interfaces
@@ -215,6 +212,8 @@ brew "helix"
 brew "hexyl"
 # Improved top (interactive process viewer)
 brew "htop"
+# Command-line benchmarking tool
+brew "hyperfine"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
 brew "iperf3"
 # Dex to Java decompiler
@@ -235,8 +234,6 @@ brew "libnfc"
 brew "libssh"
 # XML security library
 brew "libxmlsec1"
-# YAML Parser
-brew "libyaml"
 # Next-gen compiler infrastructure
 brew "llvm@19"
 # Language Server for the Lua language
@@ -277,16 +274,22 @@ brew "openjdk@11"
 brew "pandoc"
 # Shell command parallelization utility
 brew "parallel"
+# Friendly PIL fork (Python Imaging Library)
+brew "pillow"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Object-relational database system
-brew "postgresql@14", restart_service: :changed
+brew "postgresql@14"
 # Convert bitmaps to vector graphics
 brew "potrace"
 # Advanced Python REPL
 brew "ptpython"
+# Python 3 bindings for the Cairo graphics library
+brew "py3cairo"
+# GNOME Python bindings (based on GObject Introspection)
+brew "pygobject3"
 # Python library for creating static, animated, and interactive visualizations
 brew "python-matplotlib"
 # Interpreted, interactive, object-oriented programming language
@@ -313,6 +316,8 @@ brew "rename"
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
+# Ruby version manager
+brew "rv"
 # Build tool for Scala projects
 brew "sbt"
 # Multi-media library with bindings for multiple languages
@@ -347,6 +352,8 @@ brew "tmux"
 brew "typst"
 # Web Assembly Binary Toolkit
 brew "wabt"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 # Internet file retriever
 brew "wget"
 # JavaScript package manager
@@ -359,6 +366,8 @@ brew "zsh-syntax-highlighting"
 brew "dimentium/autoraise/autoraise", args: ["with-dalternative_task_switcher"]
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
+# Terminal-based AI coding assistant
+cask "claude-code"
 cask "font-sf-mono"
 cask "font-sf-pro"
 # Pre-built GNU bare-metal toolchain for 32-bit Arm processors
@@ -381,6 +390,8 @@ cask "karabiner-elements"
 cask "keycastr"
 # Minecraft modding platform
 cask "modrinth"
+# Tiling window manager for macOS with Niri-inspired column-based layout
+cask "barutsrb/tap/omniwm", trusted: true
 # Control your tools with a few keystrokes
 cask "raycast"
 # Mathematics software system
@@ -389,10 +400,11 @@ cask "sage"
 cask "sf-symbols"
 # App that enables mouse-free UI interaction
 cask "shortcat"
-# Compiler for the Standard ML '97 programming language
 cask "smlnj"
 # System monitor for the menu bar
 cask "stats"
+# Menu bar manager
+cask "thaw"
 # Compatibility layer to run Windows applications
 cask "wine-stable"
 # Multiplayer code editor
@@ -402,6 +414,7 @@ cask "zen@twilight"
 cargo "bat"
 cargo "cargo-binstall"
 cargo "cargo-bisect-rustc"
+cargo "cargo-bp"
 cargo "cargo-cache"
 cargo "cargo-expand"
 cargo "cargo-generate"
@@ -409,18 +422,19 @@ cargo "cargo-leptos"
 cargo "cargo-llvm-cov"
 cargo "cargo-make"
 cargo "cargo-show-asm"
-cargo "cross"
+cargo "cross", source: "https://github.com/cross-rs/cross"
 cargo "evcxr_repl"
 cargo "eza"
-cargo "flamegraph"
+cargo "flamegraph", source: "https://github.com/flamegraph-rs/flamegraph.git"
 cargo "leptosfmt"
 cargo "ripgrep"
-cargo "shiroa"
+cargo "shiroa", source: "https://github.com/Myriad-Dreamin/shiroa"
 cargo "tokei"
 cargo "trunk"
 cargo "typstyle"
 cargo "wasm-bindgen-cli"
 cargo "wasm-pack"
+cargo "x"
 npm "@babel/preset-env"
 npm "@railway/cli"
 npm "@types/node"
