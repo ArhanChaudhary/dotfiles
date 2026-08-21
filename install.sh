@@ -1,5 +1,4 @@
-#!/usr/bin/env zsh
-set -euxo pipefail
+#!/bin/sh
 
 SCRIPTDIR="$(dirname "$0")"
 
@@ -10,7 +9,7 @@ ln -s "$SCRIPTDIR"/pre-commit "$SCRIPTDIR"/.git/hooks/pre-commit
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Install homebrew packages
-brew bundle --file="$SCRIPTDIR"/Brewfile
+brew bundle -v --file="$SCRIPTDIR"/Brewfile
 
 # Install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh

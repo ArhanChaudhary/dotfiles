@@ -222,8 +222,6 @@ brew "libnfc"
 brew "libssh"
 # XML security library
 brew "libxmlsec1"
-# Next-gen compiler infrastructure
-brew "llvm@19"
 # Language Server for the Lua language
 brew "lua-language-server"
 # Small build system for use with gyp or CMake
@@ -338,8 +336,6 @@ brew "wget"
 brew "yarn"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# Fish shell like syntax highlighting for zsh
-brew "zsh-syntax-highlighting"
 # Focus-follows-mouse for MacOS
 brew "dimentium/autoraise/autoraise", args: ["with-dalternative_task_switcher"]
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.

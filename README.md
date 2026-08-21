@@ -4,7 +4,7 @@
 
 My MacOS dotfiles. The setup on a brand new Mac is as follows:
 
-```zsh
+```sh
 xcode-select --install
 git clone https://github.com/ArhanChaudhary/dotfiles ~
 cd ~/dotfiles
