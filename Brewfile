@@ -1,31 +1,15 @@
-tap "adoptopenjdk/openjdk", trusted: true
 tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git", trusted: true
 tap "barutsrb/tap", "https://github.com/BarutSRB/homebrew-tap"
 tap "dimentium/autoraise", trusted: true
-tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
 tap "gap-system/gap", trusted: true
 tap "jurplel/tap", trusted: true
 tap "oven-sh/bun", trusted: true
-# XML-based font configuration API for X Windows
-brew "fontconfig"
-# Core application library for C
-brew "glib"
-# Vector graphics library with cross-device output support
-brew "cairo"
-# OpenType text shaping engine
-brew "harfbuzz"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
-# Development kit for the Java programming language
-brew "openjdk"
-# Java build tool
-brew "ant"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
-# Tool for reverse engineering 3rd party, closed, binary Android apps
-brew "apktool"
 # Record and share terminal sessions
 brew "asciinema"
+# Core application library for C
+brew "glib"
 # Protocol definitions and daemon for D-Bus at-spi
 brew "at-spi2-core"
 # Automatic configure script builder
@@ -54,6 +38,10 @@ brew "lua"
 brew "busted"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
+# XML-based font configuration API for X Windows
+brew "fontconfig"
+# Vector graphics library with cross-device output support
+brew "cairo"
 # Next-generation test runner for Rust
 brew "cargo-nextest"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
@@ -72,12 +60,8 @@ brew "gmp"
 brew "coreutils"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
-# C library for multiple-precision floating-point computations
-brew "mpfr"
-# GNU grep, egrep and fgrep
-brew "grep"
-# Tool for building toolchains
-brew "crosstool-ng"
+# TIFF library and utilities
+brew "libtiff"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Command-line utilities for working with desktop entries
@@ -112,6 +96,8 @@ brew "fd"
 brew "libvpx"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# OpenType text shaping engine
+brew "harfbuzz"
 # Subtitle renderer for the ASS/SSA subtitle format
 brew "libass"
 # Play, record, convert, and stream audio and video
@@ -138,6 +124,8 @@ brew "fonttools", link: false
 brew "fprobe"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# C library for multiple-precision floating-point computations
+brew "mpfr"
 # C library for the arithmetic of high precision complex numbers
 brew "libmpc"
 # GNU compiler collection
@@ -216,8 +204,6 @@ brew "htop"
 brew "hyperfine"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
 brew "iperf3"
-# Dex to Java decompiler
-brew "jadx"
 # Git-compatible distributed version control system
 brew "jj"
 # Lightweight and flexible command-line JSON processor
@@ -238,8 +224,6 @@ brew "libxmlsec1"
 brew "llvm@19"
 # Language Server for the Lua language
 brew "lua-language-server"
-# Java-based project management
-brew "maven"
 # Small build system for use with gyp or CMake
 brew "ninja"
 # Fast and user friendly build system
@@ -268,8 +252,6 @@ brew "nss"
 brew "numbat"
 # Modern shell for the GitHub era
 brew "nushell"
-# Development kit for the Java programming language
-brew "openjdk@11"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Shell command parallelization utility
@@ -298,10 +280,6 @@ brew "python@3.11"
 brew "qemu"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
-# Cross-platform application and UI framework
-brew "qt"
-# Cross-platform application and UI framework
-brew "qt@5"
 # Develop and deploy code with zero configuration
 brew "railway"
 # Install various Ruby versions and implementations
@@ -318,8 +296,6 @@ brew "ripgrep"
 brew "ruby"
 # Ruby version manager
 brew "rv"
-# Build tool for Scala projects
-brew "sbt"
 # Multi-media library with bindings for multiple languages
 brew "sfml"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -438,17 +414,8 @@ cargo "x"
 npm "@babel/preset-env"
 npm "@railway/cli"
 npm "@types/node"
-npm "cssnano"
-npm "eslint"
-npm "gitinspector"
-npm "matrix-rain"
 npm "npm-check-updates"
-npm "p-map"
-npm "purgecss"
-npm "request"
 npm "retypeapp"
 npm "serve"
-npm "ts-node"
 npm "typescript-formatter"
 npm "typescript"
-npm "workbox-cli"
