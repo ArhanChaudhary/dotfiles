@@ -4,7 +4,7 @@ fish_vi_key_bindings
 fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/bin
 export GPG_TTY=$(tty)
-ssh-add --apple-load-keychain -q
+ssh-add --apple-load-keychain -q 2>/dev/null
 
 for brew_bin in /opt/homebrew/bin/brew /home/linuxbrew/.linuxbrew/bin/brew /usr/local/bin/brew
     if test -x $brew_bin
