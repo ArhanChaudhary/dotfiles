@@ -13,7 +13,7 @@ source install.sh
 
 # Features
 
-- Shell: Zsh
+- Shell: Fish
 - IDE: Zed
 - Browser: Zen
 - Terminal: Ghostty

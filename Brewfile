@@ -112,6 +112,8 @@ brew "srt"
 brew "tesseract"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg@4"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
 # New file format for still image compression
 brew "jpeg-xl"
 # Database of common MIME types

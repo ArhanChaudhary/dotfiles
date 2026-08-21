@@ -32,7 +32,7 @@ PaperWM:bindHotkeys({
     -- position and resize focused window
     center_window = { { "alt" }, "return" },
     -- full_width = {{"ctrl"}, "return"},
-    -- cycle_width = {{"ctrl"}, "return"},
+    cycle_width = { { "ctrl", "shift" }, "return" },
     reverse_cycle_width = { { "ctrl" }, "return" },
     -- cycle_height = {{"ctrl", "shift"}, "n"},
     -- reverse_cycle_height = {{"ctrl"}, "n"},
