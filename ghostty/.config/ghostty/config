@@ -31,3 +31,5 @@ window-position-y = 0
 focus-follows-mouse = true
 notify-on-command-finish = unfocused
 notify-on-command-finish-action = no-bell,notify
+
+command = /usr/local/bin/fish --login --interactive
