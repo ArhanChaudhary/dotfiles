@@ -6,7 +6,8 @@ fish_add_path ~/.local/bin
 export GPG_TTY=$(tty)
 ssh-add --apple-load-keychain -q
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+command -v brew || export PATH="/opt/homebrew/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin"
+command -v brew && eval "$(brew shellenv)"
 starship init fish | source
 zoxide init fish | source
 fzf --fish | source
