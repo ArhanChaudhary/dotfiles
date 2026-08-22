@@ -11,6 +11,8 @@ ln -s "$SCRIPTDIR"/pre-commit "$SCRIPTDIR"/.git/hooks/pre-commit
 # Install homebrew packages
 brew bundle -v --file="$SCRIPTDIR"/Brewfile
 
+sudo ln -sfn "$(brew --prefix)"/bin/fish /usr/local/bin/fish
+
 # Install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 # Install rust

@@ -8,6 +8,7 @@
         }
     },
     "display": {
+        "disableLinewrap": true,
         "key": {
             "width": 11
         },

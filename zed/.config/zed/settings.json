@@ -419,7 +419,7 @@
   },
   "terminal": {
     "shell": {
-      "program": "/opt/homebrew/bin/fish",
+      "program": "/usr/local/bin/fish",
     },
     "env": {
       "EDITOR": "hx",
