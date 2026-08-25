@@ -1,6 +1,7 @@
 {
-  "theme": "dark",
   "enabledPlugins": {
     "rust-analyzer-lsp@claude-plugins-official": true
-  }
+  },
+  "theme": "dark",
+  "skipWorkflowUsageWarning": true
 }
