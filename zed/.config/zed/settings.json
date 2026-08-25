@@ -379,9 +379,6 @@
     "right_padding": 0.1,
   },
   "terminal": {
-    "shell": {
-      "program": "/usr/local/bin/fish",
-    },
     "env": {
       "EDITOR": "hx",
     },
